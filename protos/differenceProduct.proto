@@ -1,0 +1,17 @@
+syntax="proto3";
+
+package protos;
+
+service SubtractDivide {
+    rpc CalculateDifference(Request) returns (Response) {}
+    rpc CalculateProduct(Request) returns (Response) {}
+}
+
+message Request {
+    int64 numberFirst = 1;
+    int64 numberSecond = 2;
+}
+
+message Response {
+    int64 calculatedAnswer = 1;
+}
